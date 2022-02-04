@@ -1,6 +1,6 @@
 /* joins: select all the computers from the products table:
 using the products table and the categories table, return the product name and the category name */
-SELECT products.Name, categories.Name FROM bestbuy.products INNER JOIN categories ON products.CategoryID=categories.CategoryID;  
+SELECT products.Name, categories.Name FROM bestbuy.products INNER JOIN categories ON products.CategoryID=categories.CategoryID WHERE categories.Name ="Computers";  
 /* joins: find all product names, product prices, and products ratings that have a rating of 5 */
 SELECT products.Name, products.Price, reviews.Rating FROM bestbuy.products INNER JOIN reviews ON products.ProductID=reviews.ReviewID WHERE Rating=5;  
 /* joins: find the employee with the most total quantity sold.  use the sum() function and group by */

@@ -24,3 +24,7 @@ WHERE Name="Visio TV" ORDER BY r.Rating LIMIT 1;
 -- ------------------------------------------ Extra - May be difficult
 /* Your goal is to write a query that serves as an employee sales report.
 This query should return the employeeID, the employee's first and last name, the name of each product, how many of that product they sold */
+SELECT e.EmployeeID, e.FirstName, e.LastName, p.Name AS Product, s.Quantity FROM bestbuy.employees AS e
+INNER JOIN sales AS s ON s.EmployeeID=e.EmployeeID
+INNER JOIN products AS p ON p.ProductID=s.ProductID
+ORDER BY EmployeeID;
